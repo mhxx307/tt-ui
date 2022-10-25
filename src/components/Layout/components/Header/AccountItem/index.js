@@ -9,7 +9,11 @@ const cx = classNames.bind(styles);
 function AccountItem() {
     return (
         <div className={cx('wrapper')}>
-            <img className={cx('avatar')} src="" alt="A" />
+            <img
+                className={cx('avatar')}
+                src="https://www.adobe.com/express/feature/image/media_16ad2258cac6171d66942b13b8cd4839f0b6be6f3.png?width=750&format=png&optimize=medium"
+                alt="A"
+            />
             <div className={cx('info')}>
                 <p className={cx('name')}>
                     <span>Nguyen Van A</span>
