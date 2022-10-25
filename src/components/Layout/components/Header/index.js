@@ -3,17 +3,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import { faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from './AccountItem';
+import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
 function Header() {
-    const [searchResult, setSearchResult] = useState([]);
+    // const [searchResult, setSearchResult] = useState([]);
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -51,7 +52,10 @@ function Header() {
 
                 {/* action */}
                 <div className={cx('action')}>
-                    <button className={cx('btn', 'btn--primary')}>Sign up</button>
+                    <Button text>Upload</Button>
+                    <Button primary disabled>
+                        Login
+                    </Button>
                 </div>
             </div>
         </header>
