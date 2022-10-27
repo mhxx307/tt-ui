@@ -4,16 +4,17 @@
     .menu-item {
         margin-left: 0;
     }
+
+    .menu-title {
+        margin-left: 8px;
+    }
+
+    .menu-popper {
+        padding-bottom: 8px;
+    }
 }
 
-.menu-title {
-    margin-left: 8px;
-}
-
-.menu-popper {
-    padding-bottom: 8px;
-}
-
+// menu-items
 .menu-item {
     width: 100%;
     justify-content: flex-start;
@@ -21,7 +22,31 @@
     transition: all 0.2s linear;
     font-weight: 600;
     padding: 11px 16px;
+    line-height: 1.8rem;
+    color: var(--black);
     &:hover {
         background-color: rgba(22, 24, 35, 0.03);
     }
+}
+
+// header menu
+.header {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: -8px;
+}
+
+.back-btn {
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

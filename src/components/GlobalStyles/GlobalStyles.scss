@@ -9,6 +9,7 @@
     // default layout
     --default-layout-header-height: 60px;
     --default-layout-width: 1050px;
+    --default-layout-horizontal-spacer: 24px;
 }
 
 * {
@@ -31,7 +32,6 @@ body {
 
 a[href] {
     text-decoration: none;
-    color: var(--text-color);
 }
 
 input,

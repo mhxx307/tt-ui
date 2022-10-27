@@ -1,15 +1,36 @@
 import Tippy from '@tippyjs/react';
 import classNames from 'classnames/bind';
-import React from 'react';
+import React, { useState } from 'react';
 import style from './Menu.module.scss';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import MenuItem from './MenuItem';
+import Header from './Header';
 
 const cx = classNames.bind(style);
 
-function Menu({ children, items = [] }) {
+const defaultFn = () => {};
+
+function Menu({ children, items = [], onChange = defaultFn }) {
+    const [history, setHistory] = useState([{ data: items }]);
+    const current = history[history.length - 1];
+
     const renderItems = () => {
-        return items.map((item, index) => <MenuItem data={item} key={index} />);
+        return current.data.map((item, index) => {
+            const isParent = !!item.children;
+            return (
+                <MenuItem
+                    data={item}
+                    key={index}
+                    onClick={() => {
+                        if (isParent) {
+                            setHistory((prev) => [...prev, item.children]);
+                        } else {
+                            onChange(item);
+                        }
+                    }}
+                />
+            );
+        });
     };
 
     return (
@@ -17,10 +38,21 @@ function Menu({ children, items = [] }) {
             interactive={true}
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
-                    <PopperWrapper className={cx('menu-popper')}>{renderItems()}</PopperWrapper>
+                    <PopperWrapper className={cx('menu-popper')}>
+                        {history.length > 1 && (
+                            <Header
+                                title="Language"
+                                onBack={() => {
+                                    setHistory((prev) => prev.slice(0, history.length - 1));
+                                }}
+                            />
+                        )}
+                        {renderItems()}
+                    </PopperWrapper>
                 </div>
             )}
             trigger="click"
+            animation={false}
             zIndex={9999}
         >
             {children}
