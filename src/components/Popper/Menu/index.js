@@ -54,6 +54,9 @@ function Menu({ children, items = [], onChange = defaultFn }) {
             trigger="click"
             animation={false}
             zIndex={9999}
+            onHide={() => setHistory((prev) => prev.slice(0, 1))}
+            placement="bottom-end"
+            offset={[14, 10]}
         >
             {children}
         </Tippy>
