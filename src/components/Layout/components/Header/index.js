@@ -1,16 +1,7 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faKeyboard, faQuestionCircle, faUser } from '@fortawesome/free-regular-svg-icons';
-import {
-    faCloudUpload,
-    faCoins,
-    faEarthAsia,
-    faEllipsisVertical,
-    faGear,
-    faMagnifyingGlass,
-    faSignOut,
-    faSpinner,
-} from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
+import { faEarthAsia, faEllipsisVertical, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import HeadlessTippy from '@tippyjs/react/headless';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
@@ -23,7 +14,7 @@ import AccountItem from './AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import Image from '~/components/Image';
-import { CoinIcon, GearIcon, UploadIcon, UserIcon } from '~/components/Icons';
+import { CoinIcon, FeedbackIcon, GearIcon, KeyboardIcon, SignOut, UploadIcon, UserIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
 
@@ -39,8 +30,8 @@ const MENU_ITEMS = [
             ],
         },
     },
-    { icon: <FontAwesomeIcon icon={faQuestionCircle} />, title: 'Feedback and Help', to: '/feedback' },
-    { icon: <FontAwesomeIcon icon={faKeyboard} />, title: 'Keyboard shortcuts' },
+    { icon: <FeedbackIcon width="16px" height="16px" />, title: 'Feedback and Help', to: '/feedback' },
+    { icon: <KeyboardIcon />, title: 'Keyboard shortcuts' },
 ];
 
 function Header() {
@@ -56,7 +47,7 @@ function Header() {
         { icon: <GearIcon width="16px" height="16px" />, title: 'Settings', to: '/settings' },
 
         ...MENU_ITEMS,
-        { icon: <FontAwesomeIcon icon={faSignOut} />, title: 'Log out', to: '/logout', separate: true },
+        { icon: <SignOut width="16px" height="16px" />, title: 'Log out', to: '/logout', separate: true },
     ];
 
     return (
