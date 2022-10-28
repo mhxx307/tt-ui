@@ -22,6 +22,8 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from './AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
+import Image from '~/components/Image';
+import { CoinIcon, GearIcon, UploadIcon, UserIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
 
@@ -49,9 +51,9 @@ function Header() {
     const currentUser = true;
 
     const userMenu = [
-        { icon: <FontAwesomeIcon icon={faUser} />, title: 'View profile', to: '/@hoa' },
-        { icon: <FontAwesomeIcon icon={faCoins} />, title: 'Get coins', to: '/coin' },
-        { icon: <FontAwesomeIcon icon={faGear} />, title: 'Settings', to: '/settings' },
+        { icon: <UserIcon width="16px" height="16px" />, title: 'View profile', to: '/@hoa' },
+        { icon: <CoinIcon width="16px" height="16px" />, title: 'Get coins', to: '/coin' },
+        { icon: <GearIcon width="16px" height="16px" />, title: 'Settings', to: '/settings' },
 
         ...MENU_ITEMS,
         { icon: <FontAwesomeIcon icon={faSignOut} />, title: 'Log out', to: '/logout', separate: true },
@@ -62,7 +64,7 @@ function Header() {
             <div className={cx('inner')}>
                 {/* logo */}
                 <div className={cx('logo')}>
-                    <img src={images.logo} alt="logo" width={140} height={50} />
+                    <Image src={images.logo} alt="logo" width={140} height={50} />
                 </div>
 
                 {/* nav */}
@@ -97,7 +99,7 @@ function Header() {
                         <>
                             <Tippy content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -110,7 +112,7 @@ function Header() {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 src="https://www.adobe.com/express/feature/image/media_16ad2258cac6171d66942b13b8cd4839f0b6be6f3.png?width=750&format=png&optimize=medium"
                                 alt="dog avatar"
                                 className={cx('user-avatar')}
