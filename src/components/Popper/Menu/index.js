@@ -10,7 +10,7 @@ const cx = classNames.bind(style);
 
 const defaultFn = () => {};
 
-function Menu({ children, items = [], onChange = defaultFn }) {
+function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn }) {
     const [history, setHistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
 
@@ -57,6 +57,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
             onHide={() => setHistory((prev) => prev.slice(0, 1))}
             placement="bottom-end"
             offset={[14, 10]}
+            hideOnClick={hideOnClick}
         >
             {children}
         </Tippy>

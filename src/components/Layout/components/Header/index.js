@@ -3,16 +3,16 @@ import 'tippy.js/dist/tippy.css';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEarthAsia, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 import styles from './Header.module.scss';
 import images from '~/assets/images';
-
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import Image from '~/components/Image';
-import { CoinIcon, FeedbackIcon, GearIcon, KeyboardIcon, SignOut, UploadIcon, UserIcon } from '~/components/Icons';
-
 import Search from '~/components/Layout/components/Search';
+import routesConfig from '~/config/routes';
+import { CoinIcon, FeedbackIcon, GearIcon, KeyboardIcon, SignOut, UploadIcon, UserIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
 
@@ -52,9 +52,9 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 {/* logo */}
-                <div className={cx('logo')}>
+                <Link to={routesConfig.home} className={cx('logo')}>
                     <Image src={images.logo} alt="logo" width={140} height={50} />
-                </div>
+                </Link>
 
                 {/* nav */}
                 <Search />

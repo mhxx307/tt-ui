@@ -3,12 +3,13 @@ import Follow from '~/pages/Follow';
 import Upload from '~/pages/Upload';
 import HeaderOnlyLayout from '~/components/Layout/HeaderOnlyLayout';
 import Profile from '~/pages/Profile';
+import routesConfig from '~/config/routes';
 
 const publicRoutes = [
-    { path: '/', component: Home },
-    { path: '/follow', component: Follow },
-    { path: '/upload', component: Upload, layout: HeaderOnlyLayout },
-    { path: '/@:nickname', component: Profile },
+    { path: routesConfig.home, component: Home },
+    { path: routesConfig.following, component: Follow },
+    { path: routesConfig.upload, component: Upload, layout: HeaderOnlyLayout },
+    { path: routesConfig.profile, component: Profile },
 ];
 
 const privateRoutes = [];
