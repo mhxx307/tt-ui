@@ -162,7 +162,7 @@ export const SearchIcon = ({ className, width = '3.2rem', height = '3.2rem' }) =
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
-            class={className}
+            className={className}
             width={width}
             height={height}
         >

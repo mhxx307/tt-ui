@@ -12,6 +12,10 @@
     .menu-popper {
         padding-bottom: 8px;
     }
+
+    .menu-body {
+        overflow-y: auto;
+    }
 }
 
 // menu-items
@@ -39,6 +43,7 @@
     height: 50px;
     width: 100%;
     margin-top: -8px;
+    flex-shrink: 0;
 }
 
 .back-btn {

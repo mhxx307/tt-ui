@@ -54,10 +54,12 @@ function Search() {
     };
 
     return (
-        <>
+        // using a wapper <div> or <span> tag around the references element solves this by creating a new parentNode context for the popper
+        <div>
             <HeadlessTippy
                 visible={showResult && searchResult.length > 0}
                 interactive={true}
+                appendTo={() => document.body}
                 render={(attrs) => (
                     <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                         <PopperWrapper>
@@ -99,7 +101,7 @@ function Search() {
                     </button>
                 </div>
             </HeadlessTippy>
-        </>
+        </div>
     );
 }
 
