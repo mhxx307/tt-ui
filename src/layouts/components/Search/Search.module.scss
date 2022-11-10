@@ -76,10 +76,16 @@
 
 .clear {
     cursor: pointer;
+    .clear-icon {
+        width: 15px;
+    }
 }
 
 .loading {
     animation: spinner 1s linear infinite;
+    .loading-icon {
+        width: 15px;
+    }
 }
 
 @keyframes spinner {

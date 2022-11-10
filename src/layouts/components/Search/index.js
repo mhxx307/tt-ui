@@ -1,18 +1,15 @@
 import classNames from 'classnames/bind';
 import React, { useState } from 'react';
 import HeadlessTippy from '@tippyjs/react/headless';
-import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
-import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import styles from './Search.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { SearchIcon } from '~/components/Icons';
+import { ClearIcon, LoadingIcon, SearchIcon } from '~/components/Icons';
 import { useRef } from 'react';
 import { useEffect } from 'react';
 import { useDebounce } from '~/hooks';
-import * as searchService from '~/apiServices/searchService';
+import * as searchService from '~/services/searchService';
 
 const cx = classNames.bind(styles);
 
@@ -53,6 +50,10 @@ function Search() {
         }
     };
 
+    const handleHideResult = () => {
+        setShowResult(false);
+    };
+
     return (
         // using a wapper <div> or <span> tag around the references element solves this by creating a new parentNode context for the popper
         <div>
@@ -64,12 +65,13 @@ function Search() {
                     <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                         <PopperWrapper>
                             <h4 className={cx('search-title')}>Accounts</h4>
-                            {searchResult.map((item) => (
-                                <AccountItem key={item.id} data={item} />
+                            {searchResult.map((result) => (
+                                <AccountItem key={result.id} data={result} />
                             ))}
                         </PopperWrapper>
                     </div>
                 )}
+                onClickOutside={handleHideResult}
             >
                 <div className={cx('search')}>
                     <input
@@ -88,12 +90,12 @@ function Search() {
                                 inputRef.current.focus();
                             }}
                         >
-                            <FontAwesomeIcon icon={faCircleXmark} />
+                            <ClearIcon className={cx('clear-icon')} />
                         </button>
                     )}
                     {loading && (
                         <button className={cx('loading')}>
-                            <FontAwesomeIcon icon={faSpinner} />
+                            <LoadingIcon className={cx('loading-icon')} />
                         </button>
                     )}
                     <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>

@@ -1,4 +1,4 @@
-export const UploadIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => {
+export const UploadIcon = ({ className, width = '1.6rem', height = '1.6rem' }) => {
     return (
         <svg
             aria-hidden="true"
@@ -20,7 +20,7 @@ export const UploadIcon = ({ className, width = '3.2rem', height = '3.2rem' }) =
     );
 };
 
-export const UserIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => {
+export const UserIcon = ({ className, width = '1.6rem', height = '1.6rem' }) => {
     return (
         <svg
             aria-hidden="true"
@@ -42,7 +42,7 @@ export const UserIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => 
     );
 };
 
-export const CoinIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => {
+export const CoinIcon = ({ className, width = '1.6rem', height = '1.6rem' }) => {
     return (
         <svg
             aria-hidden="true"
@@ -64,7 +64,7 @@ export const CoinIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => 
     );
 };
 
-export const GearIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => {
+export const GearIcon = ({ className, width = '1.6rem', height = '1.6rem' }) => {
     return (
         <svg
             aria-hidden="true"
@@ -86,7 +86,7 @@ export const GearIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => 
     );
 };
 
-export const SignOut = ({ className, width = '3.2rem', height = '3.2rem' }) => {
+export const SignOut = ({ className, width = '1.6rem', height = '1.6rem' }) => {
     return (
         <svg
             aria-hidden="true"
@@ -108,7 +108,7 @@ export const SignOut = ({ className, width = '3.2rem', height = '3.2rem' }) => {
     );
 };
 
-export const FeedbackIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => {
+export const FeedbackIcon = ({ className, width = '1.6rem', height = '1.6rem' }) => {
     return (
         <svg
             aria-hidden="true"
@@ -130,7 +130,7 @@ export const FeedbackIcon = ({ className, width = '3.2rem', height = '3.2rem' })
     );
 };
 
-export const KeyboardIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => {
+export const KeyboardIcon = ({ className, width = '1.6rem', height = '1.6rem' }) => {
     return (
         <svg
             aria-hidden="true"
@@ -152,7 +152,7 @@ export const KeyboardIcon = ({ className, width = '3.2rem', height = '3.2rem' })
     );
 };
 
-export const SearchIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => {
+export const SearchIcon = ({ className, width = '1.6rem', height = '1.6rem' }) => {
     return (
         <svg
             aria-hidden="true"
@@ -169,6 +169,94 @@ export const SearchIcon = ({ className, width = '3.2rem', height = '3.2rem' }) =
             <path
                 fill="currentColor"
                 d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"
+            ></path>
+        </svg>
+    );
+};
+
+export const ClearIcon = ({ className, width = '1.6rem', height = '1.6rem' }) => {
+    return (
+        <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="far"
+            data-icon="circle-xmark"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            className={className}
+            width={width}
+            height={height}
+        >
+            <path
+                fill="currentColor"
+                d="M175 175C184.4 165.7 199.6 165.7 208.1 175L255.1 222.1L303 175C312.4 165.7 327.6 165.7 336.1 175C346.3 184.4 346.3 199.6 336.1 208.1L289.9 255.1L336.1 303C346.3 312.4 346.3 327.6 336.1 336.1C327.6 346.3 312.4 346.3 303 336.1L255.1 289.9L208.1 336.1C199.6 346.3 184.4 346.3 175 336.1C165.7 327.6 165.7 312.4 175 303L222.1 255.1L175 208.1C165.7 199.6 165.7 184.4 175 175V175zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"
+            ></path>
+        </svg>
+    );
+};
+
+export const LoadingIcon = ({ className, width = '1.6rem', height = '1.6rem' }) => {
+    return (
+        <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="spinner"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            className={className}
+            width={width}
+            height={height}
+        >
+            <path
+                fill="currentColor"
+                d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"
+            ></path>
+        </svg>
+    );
+};
+
+export const EarthAsiaIcon = ({ className, width = '1.6rem', height = '1.6rem' }) => {
+    return (
+        <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="earth-asia"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            className={className}
+            width={width}
+            height={height}
+        >
+            <path
+                fill="currentColor"
+                d="M51.7 295.1l31.7 6.3c7.9 1.6 16-.9 21.7-6.6l15.4-15.4c11.6-11.6 31.1-8.4 38.4 6.2l9.3 18.5c4.8 9.6 14.6 15.7 25.4 15.7c15.2 0 26.1-14.6 21.7-29.2l-6-19.9c-4.6-15.4 6.9-30.9 23-30.9h2.3c13.4 0 25.9-6.7 33.3-17.8l10.7-16.1c5.6-8.5 5.3-19.6-.8-27.7l-16.1-21.5c-10.3-13.7-3.3-33.5 13.4-37.7l17-4.3c7.5-1.9 13.6-7.2 16.5-14.4l16.4-40.9C303.4 52.1 280.2 48 256 48C141.1 48 48 141.1 48 256c0 13.4 1.3 26.5 3.7 39.1zm407.7 4.6c-3-.3-6-.1-9 .8l-15.8 4.4c-6.7 1.9-13.8-.9-17.5-6.7l-2-3.1c-6-9.4-16.4-15.1-27.6-15.1s-21.6 5.7-27.6 15.1l-6.1 9.5c-1.4 2.2-3.4 4.1-5.7 5.3L312 330.1c-18.1 10.1-25.5 32.4-17 51.3l5.5 12.4c8.6 19.2 30.7 28.5 50.5 21.1l2.6-1c10-3.7 21.3-2.2 29.9 4.1l1.5 1.1c37.2-29.5 64.1-71.4 74.4-119.5zM512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM144.5 348.1c-2.1 8.6 3.1 17.3 11.6 19.4l32 8c8.6 2.1 17.3-3.1 19.4-11.6s-3.1-17.3-11.6-19.4l-32-8c-8.6-2.1-17.3 3.1-19.4 11.6zm92-20c-2.1 8.6 3.1 17.3 11.6 19.4s17.3-3.1 19.4-11.6l8-32c2.1-8.6-3.1-17.3-11.6-19.4s-17.3 3.1-19.4 11.6l-8 32zM343.2 113.7c-7.9-4-17.5-.7-21.5 7.2l-16 32c-4 7.9-.7 17.5 7.2 21.5s17.5 .7 21.5-7.2l16-32c4-7.9 .7-17.5-7.2-21.5z"
+            ></path>
+        </svg>
+    );
+};
+
+export const EllipsisVerticalIcon = ({ className, width = '1.6rem', height = '1.6rem' }) => {
+    return (
+        <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="ellipsis-vertical"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 128 512"
+            className={className}
+            width={width}
+            height={height}
+        >
+            <path
+                fill="currentColor"
+                d="M64 360c30.9 0 56 25.1 56 56s-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56zm0-160c30.9 0 56 25.1 56 56s-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56zM120 96c0 30.9-25.1 56-56 56S8 126.9 8 96S33.1 40 64 40s56 25.1 56 56z"
             ></path>
         </svg>
     );
